@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "version": "0.1.1",
+  "author": "Developer",
+  "name": "Example",
+  "description": "Experiments API + Vite",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "abc@123.xyz",
+      "strict_min_version": "128.0"
+    }
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [],
+  "experiment_apis": {
+    "FileSystem": {
+      "schema": "api/schema.json",
+      "parent": {
+        "scopes": ["addon_parent"],
+        "paths": [["FileSystem"]],
+        "script": "api/implementation.js"
+      }
+    }
+  }
+}
